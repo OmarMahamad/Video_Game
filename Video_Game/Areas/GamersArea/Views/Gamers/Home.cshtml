@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Areas/GamersArea/Views/Shared/_LayoutGamer.cshtml";
+    var user = ViewBag.User;
+    var listgame = ViewBag.game;
+
+}
+
+
+<section class="hero">
+    <h2>@user.Name عالم الالعاب بين يديك</h2>
+</section>
+
+<section class="games-section">
+    <h3>أحدث الألعاب</h3>
+    <div class="games-grid">
+        @if (listgame!=null)
+        {
+            @Html.Partial("~/Areas/GamersArea/Views/Shared/_list.cshtml")
+
+        }
+        else
+        {
+            <h1>
+                No we news game
+            </h1>
+        }
+    </div>
+</section>

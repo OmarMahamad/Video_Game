@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لوحة تحكم الأدمن</title>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="~/css/_layoutAdmin.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/addgame.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <header>
+        <h1>لوحة تحكم الأدمن</h1>
+        <nav>
+            <a asp-area="Admin" asp-controller="Admin" asp-action="AddGame">إضافة لعبة</a>
+            <a href="#">إدارة الألعاب</a>
+            <a href="#">إدارة المستخدمين</a>
+            <a href="#">الإعدادات</a>
+        </nav>
+    </header>
+
+    <main>
+        @RenderBody()
+    </main>
+
+    
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2024 لوحة تحكم الأدمن</p>
+    </footer>
+
+</body>
+</html>

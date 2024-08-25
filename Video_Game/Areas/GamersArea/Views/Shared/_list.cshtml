@@ -1,0 +1,14 @@
+﻿@{
+    var listgame = ViewBag.game;
+}
+
+    @foreach (var item in listgame)
+    {
+        <div class="game-card">
+            <img src="@item.ImagePath" alt="لعبة 1">
+            <h4>@item.Titel الاسم</h4>
+            <p>@item.Price$ السعر</p>
+        </div>
+    }
+
+

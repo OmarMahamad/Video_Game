@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "Home";
+    Layout = "~/Areas/Admin/Views/Sherd/_LayoutAdmin.cshtml";
+    var listgame = ViewBag.game;
+}
+
+
+
+<div class="new-games">
+    <h2>الألعاب الجديدة</h2>
+    <div class="game-list">
+        @if (listgame!=null)
+        {
+            @foreach (var item in listgame)
+            {
+                <div class="game-item">
+                    <h4><a asp>@item.Titel</a></h4>
+                    <p>أضيفت بتاريخ: @item.ReleaseDate</p>
+                </div>
+            }
+        }
+        else
+        {
+            <h4>
+                no have game
+            </h4>
+        }
+    </div>
+</div>

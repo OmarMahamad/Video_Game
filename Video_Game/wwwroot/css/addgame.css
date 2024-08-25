@@ -1,0 +1,85 @@
+﻿body {
+    font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../img/—Pngtree—mountain sunset minimalist landscape scenery_1604211.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+    body::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: -1;
+    }
+
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: rgba(31, 31, 31, 0.9);
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    text-align: center;
+    color: #f7a800;
+    margin-bottom: 30px;
+    text-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+form label {
+    display: block;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #f7a800;
+}
+
+form input[type="text"],
+form input[type="number"],
+form input[type="date"],
+form input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    background-color: #f2f2f2;
+    color: #121212;
+}
+
+form input[type="submit"] {
+    width: 100%;
+    padding: 15px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    background-color: #f7a800;
+    color: #121212;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    form input[type="submit"]:hover {
+        background-color: #e59400;
+    }
+
+.image-preview {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .image-preview img {
+        max-width: 100%;
+        max-height: 300px;
+        border-radius: 10px;
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5);
+    }

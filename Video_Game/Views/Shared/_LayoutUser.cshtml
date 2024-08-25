@@ -1,0 +1,19 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link href="~/css/Layout.css" rel="stylesheet" type="text/css" />
+
+    <link href="~/css/user.css" rel="stylesheet" type="text/css" />
+    @RenderSection("Styles", required: false)
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer></footer>
+</body>
+</html>

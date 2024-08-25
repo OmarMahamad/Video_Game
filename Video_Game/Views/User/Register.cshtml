@@ -1,0 +1,37 @@
+﻿@model Video_Game.Models.Gamer
+
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="continar">
+    <form asp-controller="User" asp-action="Register">
+        <h1>Register</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Name" asp-for="Name" required>
+            <i class="bx bx-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="text" placeholder="Eamil" asp-for="Email" required>
+            <i class="bx bx-user"></i>
+            
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="password" asp-for="Password"
+                   required>
+            <i class="bx bx-lock-alt"></i>
+
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot Password</a>
+        </div>
+        <button type="submit" class="btn">login</button>
+
+        <div class="register-link">
+            <p>You have an  account? <a asp-controller="User" asp-action="Login">Login</a></p>
+        </div>
+
+
+    </form>
+</div>

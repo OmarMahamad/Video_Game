@@ -1,0 +1,30 @@
+﻿
+
+@{
+    ViewData["Title"] = "Game";
+    Layout = "~/Areas/GamersArea/Views/Shared/_LayoutGamer.cshtml";
+    var listgame = ViewBag.game;
+}
+<section class="hero">
+    <h2>عالم الألعاب بين يديك</h2>
+    <form class="search-form" asp-area="GamersArea" asp-controller="Gamers" asp-action="SershBy" method="post">
+        <input type="text" name="name" placeholder="ابحث عن لعبة..." required>
+        <button type="submit">بحث</button>
+    </form>
+</section>
+
+
+<section class="games-section">
+    <h3>كل الالعاب </h3>
+    @if (listgame != null)
+    {
+        @Html.Partial("~/Areas/GamersArea/Views/Shared/_list.cshtml")
+
+    }
+    else
+    {
+        <h1>
+            No we news game
+        </h1>
+    }
+</section>

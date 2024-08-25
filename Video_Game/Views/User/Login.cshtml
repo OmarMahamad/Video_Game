@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Login";
+}
+
+
+<div class="continar">
+    <form asp-controller="User" asp-action="Login" >
+        <h1>login</h1>
+        <div class="input-box">
+            <input type="text" placeholder="Eamil" name="Email"
+                   required>
+            <i class="bx bx-user"></i>
+        </div>
+        <div class="input-box">
+            <input type="password" placeholder="password" name="Password"
+                   required>
+            <i class="bx bx-lock-alt"></i>
+
+        </div>
+        <div class="remember-forgot">
+            <label><input type="checkbox">Remember me</label>
+            <a href="#">Forgot Password</a>
+        </div>
+        <button type="submit" class="btn">login</button>
+
+        <div class="register-link">
+            <p>Don't have an  account? <a asp-controller="user" asp-action="Register">Register</a></p>
+        </div>
+
+
+    </form>
+</div>

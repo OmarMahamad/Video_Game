@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <link href="~/gamer/css/gamer.css" rel="stylesheet" type="text/css"  />
+    <link href="~/gamer/css/card.css" rel="stylesheet" type="text/css"  />
+    @RenderSection("Styles", required: false)
+    <title>@ViewBag.Title</title>
+</head>
+<body>
+    <header>
+        <h1>متجر ألعاب الفيديو</h1>
+        <nav>
+            <a asp-area="GamersArea" asp-controller="Gamers" asp-action="Home">الرئيسية</a>
+            <a asp-area="GamersArea" asp-controller="Gamers" asp-action="Game">الألعاب</a>
+            <a href="#">العروض</a>
+            <a href="#">تواصل معنا</a>
+        </nav>
+    </header>
+
+    @RenderBody()
+
+
+    <footer>
+        <p>جميع الحقوق محفوظة © 2024 متجر ألعاب الفيديو</p>
+    </footer>
+</body>
+</html>
